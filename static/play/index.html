@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <link href="/video.css" rel="stylesheet">
+    <link href="/forest.css" rel="stylesheet">
+    <script src="/video.js"></script>
+    <style type="text/css">
+      html, body {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <video-js id=vid class="vjs-theme-forest" controls></video-js>
+    <script>
+      var streamid = window.location.hash.substring(1);
+      var player = videojs('vid', {
+        fill: true,
+        sources: [{
+          type: 'application/x-mpegURL',
+          src: '/hls/' + streamid + '.m3u8'
+        }]
+      });
+      player.play();
+    </script>
+  </body>
+</html>
