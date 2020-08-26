@@ -147,7 +147,8 @@ RUN apk add --update \
   opus \
   rtmpdump \
   x264-dev \
-  x265-dev
+  x265-dev \
+  jq
 
 COPY --from=build-nginx /usr/local/nginx /usr/local/nginx
 COPY --from=build-nginx /etc/nginx /etc/nginx
@@ -158,6 +159,8 @@ COPY --from=build-ffmpeg /usr/lib/libfdk-aac.so.2 /usr/lib/libfdk-aac.so.2
 ENV PATH "${PATH}:/usr/local/nginx/sbin"
 RUN mkdir -p /opt/data && mkdir /www
 ADD nginx.conf /etc/nginx/nginx.conf
+ADD htpasswd /etc/nginx/htpasswd
+ADD bin/hls.sh /usr/local/bin/hls.sh
 ADD static /www/static
 
 EXPOSE 1935
