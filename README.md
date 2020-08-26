@@ -1,4 +1,4 @@
-[![Docker Repository on Quay](https://quay.io/repository/cwtv/nginx-hls-origin-docker/status "Docker Repository on Quay")](https://quay.io/repository/cwtv/nginx-hls-origin-docker)
+[![Docker Repository on Quay](https://quay.io/repository/cwtv/nginx-hls-origin/status "Docker Repository on Quay")](https://quay.io/repository/cwtv/nginx-hls-origin)
 
 # nginx-hls-origin
 
