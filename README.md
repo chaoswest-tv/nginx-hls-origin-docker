@@ -1,3 +1,5 @@
+[![Docker Repository on Quay](https://quay.io/repository/cwtv/nginx-hls-origin-docker/status "Docker Repository on Quay")](https://quay.io/repository/cwtv/nginx-hls-origin-docker)
+
 # nginx-hls-origin
 
 simple, stupid rtmp to hls livestream origin.
